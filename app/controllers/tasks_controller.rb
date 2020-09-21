@@ -8,7 +8,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    @tasks = Task.find(params[:id])
+    @task = Task.find(params[:id])
   end
 
   def new
@@ -51,8 +51,8 @@ class TasksController < ApplicationController
 
   private
 
-  def set_message
-    @tasks = Task.find(params[:id])
+  def set_task
+    @task = Task.find(params[:id])
   end
 
   def task_params
